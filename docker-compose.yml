@@ -1,0 +1,22 @@
+services:
+  todo-app:
+    build: ./
+    command: ./app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5436
+      - DB_PASSWORD=muhit9845
+
+  db:
+    image: postgres:latest
+    volumes:
+      - ./.database/postgres/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: muhit9845
+    ports:
+      - "5436:5432"
