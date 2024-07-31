@@ -1,5 +1,2 @@
-DROP TABLE tasks;
-
-DROP TABLE users;
-
+DROP TABLE tasks_table;
 DROP TABLE schema_migraions;

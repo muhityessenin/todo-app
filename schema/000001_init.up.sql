@@ -1,14 +1,4 @@
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
-CREATE TABLE users
-(
-    id            serial       not null unique,
-    name          varchar(255) not null,
-    username      varchar(255) not null unique,
-    password_hash varchar(255) not null
-);
-
-CREATE TABLE tasks
+CREATE TABLE tasks_table
 (
     id        UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     title     VARCHAR(255) NOT NULL,
