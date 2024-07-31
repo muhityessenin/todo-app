@@ -7,11 +7,15 @@ import (
 	"github.com/spf13/viper"
 	"os"
 	todo "todo-app"
+	_ "todo-app/docs"
 	"todo-app/pkg/handler"
 	"todo-app/pkg/repository"
 	"todo-app/pkg/service"
 )
 
+// @title Todo-List
+// @version 1.0
+// @description API Server for Todo App
 func main() {
 	logrus.SetFormatter(new(logrus.JSONFormatter))
 	if err := initConfig(); err != nil {

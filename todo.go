@@ -6,3 +6,9 @@ type Task struct {
 	ActiveAt string `json:"activeAt" time_format:"YYYY-MM-DD" binding:"required"`
 	Status   string `json:"status"`
 }
+
+type TaskInput struct {
+	Title    string `json:"title" binding:"required"`
+	ActiveAt string `json:"activeAt" time_format:"YYYY-MM-DD" binding:"required"`
+	Status   string `json:"status"`
+}
